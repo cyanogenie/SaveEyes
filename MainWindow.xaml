@@ -1,0 +1,15 @@
+﻿<Window x:Class="SaveEyes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SaveEyes"
+        mc:Ignorable="d"
+        Title="Home" Height="350" Width="525"
+        WindowStartupLocation ="CenterScreen">
+    <Grid>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="144,102,154.667,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="220" TextAlignment="Center" FontSize="25"><Run FontWeight="Bold" Text="Save Your Eyes"/></TextBlock>
+        <Button x:Name="BeginButton" Content="Lets Begin!" HorizontalAlignment="Left" Margin="196,176,0,0" VerticalAlignment="Top" Width="113" Height="44" RenderTransformOrigin="0.223,0.523" Click="begin_button_Click"/>
+
+    </Grid>
+</Window>
