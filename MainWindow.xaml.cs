@@ -27,7 +27,7 @@ namespace SaveEyes
 
         private void begin_button_Click(object sender, RoutedEventArgs e)
         {
-            Window1 welc = new Window1();
+            Config welc = new Config();
             welc.Show();
             
 

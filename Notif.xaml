@@ -15,10 +15,10 @@
             <StackPanel Margin="20">
                 <TextBlock TextWrapping="Wrap" Margin="5">
           <Bold>Posture Matters!</Bold><LineBreak /><LineBreak />
-          Something just happened and you are being notified of it.
+          Look away from the screen!
                 </TextBlock>
-                <CheckBox Content="Checkable" Margin="5 5 0 5" />
-               <!-- <Button Content="Dismiss" HorizontalAlignment="Center" Click="Button_Click" /> -->
+               <!-- <CheckBox Content="Checkable" Margin="5 5 0 5" /> -->
+                <Button Content="Dismiss" HorizontalAlignment="Center" Click="Dismiss_Click" /> 
             </StackPanel>
         </Border>
 

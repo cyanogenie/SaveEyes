@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,8 +24,9 @@ namespace SaveEyes
         public Notif(Window parent)
         {
             InitializeComponent();
+            Application.Current.MainWindow.Topmost = true;
 
-            Dispatcher.BeginInvoke(DispatcherPriority.ApplicationIdle, new Action(() =>
+            Dispatcher.BeginInvoke(DispatcherPriority.ApplicationIdle, new Action(async () =>
             {
                 var workingArea = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea;
                 //var transform = PresentationSource.FromVisual(this).CompositionTarget.TransformFromDevice;
@@ -37,7 +39,18 @@ namespace SaveEyes
 
                 this.Left = corner.X - this.ActualWidth - 100;
                 this.Top = corner.Y - this.ActualHeight;
+
+                await Task.Delay(2000);
+                this.Close();
             }));
+
+            
+
+        }
+
+        private void Dismiss_Click(object sender, RoutedEventArgs e) {
+
+            this.Close();
         }
     }
 }

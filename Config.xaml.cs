@@ -19,14 +19,13 @@ namespace SaveEyes
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Config : Window
     {
         DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
         
-        public Window1()
+        public Config()
         {
             InitializeComponent();
-            Notif notif = new Notif(this);
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
@@ -38,7 +37,7 @@ namespace SaveEyes
         private void Start_Click(object sender, RoutedEventArgs e)
         {
             string interval = textBox.Text;
-            int intv = int.Parse(interval);
+            int intv = String.IsNullOrEmpty(interval) ? 20 : int.Parse(interval);
 
             MessageBox.Show("Notification will be shown in every " + interval + " minutes" );
             Notif notif = new Notif(this);
@@ -51,21 +50,9 @@ namespace SaveEyes
         
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            //this.WindowState = WindowState.Normal;
-            //MessageBox.Show("Time for a break!");
-            //this.WindowState = WindowState.Minimized;
             Notif notif = new Notif(this);
             notif.Show();
             
-            //Dispatcher.BeginInvoke(DispatcherPriority.ApplicationIdle, new Action(() =>
-            //{
-            //    var workingArea = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea;
-            //    var transform = PresentationSource.FromVisual(this).CompositionTarget.TransformFromDevice;
-            //    var corner = transform.Transform(new Point(workingArea.Right, workingArea.Bottom));
-
-            //    this.Left = corner.X - this.ActualWidth - 100;
-            //    this.Top = corner.Y - this.ActualHeight;
-            //}));
         }
     }
 }

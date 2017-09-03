@@ -12,7 +12,7 @@ c:\users\sain\documents\visual studio 2015\Projects\SaveEyes\SaveEyes\obj\Debug\
 c:\users\sain\documents\visual studio 2015\Projects\SaveEyes\SaveEyes\obj\Debug\SaveEyes.csproj.GenerateResource.Cache
 c:\users\sain\documents\visual studio 2015\Projects\SaveEyes\SaveEyes\obj\Debug\SaveEyes.exe
 c:\users\sain\documents\visual studio 2015\Projects\SaveEyes\SaveEyes\obj\Debug\SaveEyes.pdb
-c:\users\sain\documents\visual studio 2015\Projects\SaveEyes\SaveEyes\obj\Debug\Window1.g.cs
-c:\users\sain\documents\visual studio 2015\Projects\SaveEyes\SaveEyes\obj\Debug\Window1.baml
 C:\Users\sain\Documents\Visual Studio 2015\Projects\SaveEyes\SaveEyes\obj\Debug\Notif.g.cs
 C:\Users\sain\Documents\Visual Studio 2015\Projects\SaveEyes\SaveEyes\obj\Debug\Notif.baml
+C:\Users\sain\Documents\Visual Studio 2015\Projects\SaveEyes\SaveEyes\obj\Debug\Config.g.cs
+C:\Users\sain\Documents\Visual Studio 2015\Projects\SaveEyes\SaveEyes\obj\Debug\Config.baml
