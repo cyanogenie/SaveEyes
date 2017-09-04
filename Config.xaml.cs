@@ -42,7 +42,7 @@ namespace SaveEyes
             MessageBox.Show("Notification will be shown in every " + interval + " minutes" );
             Notif notif = new Notif(this);
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
-            dispatcherTimer.Interval = new TimeSpan(0, 0, intv);
+            dispatcherTimer.Interval = new TimeSpan(0, intv, 0);
             dispatcherTimer.Start();
 
             this.WindowState = WindowState.Minimized;
