@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Forms;
 
 namespace SaveEyes
 {
@@ -20,13 +22,19 @@ namespace SaveEyes
     /// </summary>
     public partial class MainWindow : Window
     {
+        RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+
         public MainWindow()
         {
             InitializeComponent();
+
+
         }
 
         private void begin_button_Click(object sender, RoutedEventArgs e)
         {
+            rkApp.SetValue("SaveEyes", System.Reflection.Assembly.GetExecutingAssembly().Location);
+
             Config welc = new Config();
             welc.Show();
             
