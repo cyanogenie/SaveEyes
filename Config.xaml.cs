@@ -34,22 +34,41 @@ namespace SaveEyes
             this.Close();
         }
 
+        private DateTime TimerStart { get; set; }
+
+        public int ChInterval { get; set; }
+
         private void Start_Click(object sender, RoutedEventArgs e)
         {
             string interval = textBox.Text;
             int intv = String.IsNullOrEmpty(interval) ? 20 : int.Parse(interval);
+            ChInterval = intv;
 
             MessageBox.Show("Notification will be shown in every " + interval + " minutes" );
             Notif notif = new Notif(this);
+            this.TimerStart = DateTime.Now;
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
             dispatcherTimer.Interval = new TimeSpan(0, intv, 0);
-            dispatcherTimer.Start();
 
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMinutes(1);
+            timer.Tick += timer_Tick;
+            dispatcherTimer.Start();
+            timer.Start();
+            Timelbl.Content = intv + " minutes left";
             this.WindowState = WindowState.Minimized;
         }
-        
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            var currentValue =  (DateTime.Now - this.TimerStart);
+            int x = ChInterval - int.Parse(currentValue.Minutes.ToString());
+            Timelbl.Content = x + " minutes left" ;
+        }
+
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
+            this.TimerStart = DateTime.Now;
             Notif notif = new Notif(this);
             notif.Show();
             
