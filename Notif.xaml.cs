@@ -29,20 +29,17 @@ namespace SaveEyes
 
             Dispatcher.BeginInvoke(DispatcherPriority.ApplicationIdle, new Action(async () =>
             {
-                //var workingArea = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea;
-                //var presentationSource = PresentationSource.FromVisual(parent);
-                //var compositeTarget = presentationSource.CompositionTarget;
-                //var transform = compositeTarget.TransformFromDevice;
-                //var corner = transform.Transform(new Point(workingArea.Right, workingArea.Bottom));
+                var workingArea = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea;
+                //var transform = PresentationSource.FromVisual(this).CompositionTarget.TransformFromDevice;
 
-                //this.Left = corner.X - this.ActualWidth - 100;
-                //this.Top = corner.Y - this.ActualHeight;
 
-                double height = SystemParameters.WorkArea.Height;
-                double width = SystemParameters.WorkArea.Width;
-                this.Top = (height - this.Height) / 2;
-                this.Left = (width - this.Width) / 2;
+                var presentationSource = PresentationSource.FromVisual(parent);
+                var compositeTarge = presentationSource.CompositionTarget;
+                var transform = compositeTarge.TransformFromDevice;
+                var corner = transform.Transform(new Point(workingArea.Right, workingArea.Bottom));
 
+                this.Left = corner.X - this.ActualWidth - 100;
+                this.Top = corner.Y - this.ActualHeight;
                 SystemSounds.Hand.Play();
                 await Task.Delay(2000);
                 this.Close();
