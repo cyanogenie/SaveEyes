@@ -9,7 +9,7 @@
         WindowStartupLocation ="CenterScreen">
     <Grid Margin="0,0,-0.333,-0.333">
         <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" Margin="207,259,0,0" VerticalAlignment="Top" Width="75" Click="Exit_Click"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="263,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="263,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MaxLength="3"/>
         <Label x:Name="label" Content="Enter Notification interval:" HorizontalAlignment="Left" Margin="90,59,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.586,-0.474" Height="23" Width="152"/>
         <Button x:Name="Start" Content="Start" HorizontalAlignment="Left" Margin="207,191,0,0" VerticalAlignment="Top" Width="75" Click="Start_Click"/>
         <Label x:Name="Timelbl" HorizontalContentAlignment="Center" Content="" HorizontalAlignment="Left" Margin="192,124,0,0" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.522,1.217"/>

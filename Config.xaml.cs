@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -38,13 +39,25 @@ namespace SaveEyes
 
         public int ChInterval { get; set; }
 
+        private static bool IsTextAllowed(string text)
+        {
+            Regex regex = new Regex("^[0-9]*$"); 
+            return regex.IsMatch(text);
+        }
+
         private void Start_Click(object sender, RoutedEventArgs e)
         {
+            if (!IsTextAllowed(textBox.Text))
+            {
+                MessageBox.Show("Please enter valid input in minutes");
+                textBox.Text = string.Empty;
+                return;
+            }
             string interval = textBox.Text;
             int intv = String.IsNullOrEmpty(interval) ? 20 : int.Parse(interval);
             ChInterval = intv;
 
-            MessageBox.Show("Notification will be shown in every " + interval + " minutes" );
+            MessageBox.Show("Notification will be shown in every " + intv + " minutes" );
             Notif notif = new Notif(this);
             this.TimerStart = DateTime.Now;
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
