@@ -16,3 +16,21 @@ C:\Users\sain\Documents\Visual Studio 2015\Projects\SaveEyes\SaveEyes\obj\Debug\
 C:\Users\sain\Documents\Visual Studio 2015\Projects\SaveEyes\SaveEyes\obj\Debug\Notif.baml
 C:\Users\sain\Documents\Visual Studio 2015\Projects\SaveEyes\SaveEyes\obj\Debug\Config.g.cs
 C:\Users\sain\Documents\Visual Studio 2015\Projects\SaveEyes\SaveEyes\obj\Debug\Config.baml
+D:\SaveEyes\bin\Debug\SaveEyes.exe.config
+D:\SaveEyes\obj\Debug\SaveEyes.exe
+D:\SaveEyes\obj\Debug\SaveEyes.pdb
+D:\SaveEyes\bin\Debug\SaveEyes.exe
+D:\SaveEyes\bin\Debug\SaveEyes.pdb
+D:\SaveEyes\obj\Debug\SaveEyes.csprojResolveAssemblyReference.cache
+D:\SaveEyes\obj\Debug\MainWindow.g.cs
+D:\SaveEyes\obj\Debug\Notif.g.cs
+D:\SaveEyes\obj\Debug\Config.g.cs
+D:\SaveEyes\obj\Debug\App.g.cs
+D:\SaveEyes\obj\Debug\SaveEyes_MarkupCompile.cache
+D:\SaveEyes\obj\Debug\SaveEyes_MarkupCompile.lref
+D:\SaveEyes\obj\Debug\MainWindow.baml
+D:\SaveEyes\obj\Debug\Notif.baml
+D:\SaveEyes\obj\Debug\Config.baml
+D:\SaveEyes\obj\Debug\SaveEyes.g.resources
+D:\SaveEyes\obj\Debug\SaveEyes.Properties.Resources.resources
+D:\SaveEyes\obj\Debug\SaveEyes.csproj.GenerateResource.Cache
